@@ -207,7 +207,7 @@ p.add_birthplace("Ha Long City, Vietnam")
 
 p.add_residence("Da Nang, Vietnam")
 
-p.add_billedFrom("Ho Chi Minh City, Vietnam")
+p.add_billedFrom("Hanoi, Vietnam")
 
 p.add_mass(182)
 
