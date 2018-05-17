@@ -92,7 +92,7 @@ a.add_height(5)
 
 a.add_debut("April 30, 2002")
 
-a.add_trainedBy("Hào Brave")
+a.add_trainedBy("Hao Brave")
 
 a.add_finishingMoves("Praying Mantis")
 
@@ -191,9 +191,9 @@ c.add_otherInfo("Knows seven languages")
 print("\n\n")
 
 
-p = Tweener("Anh Hào Phan")
+p = Tweener("Anh Hao Phan")
 
-p.add_ringName("Hào Brave")
+p.add_ringName("Hao Brave")
 
 p.add_nicknames("The Flying Specialist")
 
