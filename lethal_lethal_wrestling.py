@@ -44,10 +44,10 @@ def checkInput(someInput):
 print("Hello")
 
 
-wrestlers = {'Sanaa', 'Bidziil', 'Ishita', 'Hào', 'Adela', 'The Bionic Man'}
-mass = {'Sanaa': 201, 'Bidziil': 190, 'Ishita': 205 , 'Hào': 182 , 'Adela': 180 , 'The Bionic Man': 290 }
-sig_moves = {'Sanaa': "Spinning Crane Leg Kick", 'Bidziil': "Lunar Assault" , 'Ishita': "Sleeper Headlock" , 'Hào': "Elevated Elbow Smash", 'Adela': "Firework Neckbreaker", 'The Bionic Man': "Bionic Elbow Drop"}
-fin_moves = {'Sanaa': "Praying Mantis", 'Bidziil': "Supernova Body Bomb" , 'Ishita': "Octopus Grip", 'Hào': "Flying Chokeslame", 'Adela': "Two-Handed Gut Buster", 'The Bionic Man': "Shooting Star Spinning Kick"}
+wrestlers = {'Sanaa', 'Bidziil', 'Ishita', 'Hao', 'Adela', 'The Bionic Man'}
+mass = {'Sanaa': 201, 'Bidziil': 190, 'Ishita': 205 , 'Hao': 182 , 'Adela': 180 , 'The Bionic Man': 290 }
+sig_moves = {'Sanaa': "Spinning Crane Leg Kick", 'Bidziil': "Lunar Assault" , 'Ishita': "Sleeper Headlock" , 'Hao': "Elevated Elbow Smash", 'Adela': "Firework Neckbreaker", 'The Bionic Man': "Bionic Elbow Drop"}
+fin_moves = {'Sanaa': "Praying Mantis", 'Bidziil': "Supernova Body Bomb" , 'Ishita': "Octopus Grip", 'Hao': "Flying Chokeslame", 'Adela': "Two-Handed Gut Buster", 'The Bionic Man': "Shooting Star Spinning Kick"}
 
 print("\n\n")
 print(wrestlers)
@@ -59,7 +59,7 @@ print("\n\n")
 print(fin_moves)
 print("\n\n")
 
-user_names = ["Sanaa", "Bidziil","Ishita", "Hào", "Adela","The Bionic Man"]
+user_names = ["Sanaa", "Bidziil","Ishita", "Hao", "Adela","The Bionic Man"]
 user_response = ''
 user_name = ''    
 
