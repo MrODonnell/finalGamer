@@ -59,7 +59,8 @@ print("\n\n")
 print(fin_moves)
 print("\n\n")
 
-user_names = ["Sanaa", "Bidziil","Ishita", "Hao", "Adela","The Bionic Man"]
+user_names = ["Sanaa", "Bidziil", "Ishita", "Hao", "Adela", "The Bionic Man"]
+print(user_names)
 user_response = ''
 user_name = ''    
 
@@ -111,8 +112,7 @@ shooting_star_spinning_kick = 25
 
 # opponent_name = input("Pick an Opponent: ")
 
-
-gen_moves = {"Dropkick", "DDT", "Sharpshooter", "Moonsault"}
+gen_moves = ['Dropkick', 'DDT', 'Sharpshooter', 'Moonsault']
 print("\n\n")
 print(gen_moves)
 
@@ -147,7 +147,6 @@ Sharpshooter = 20
 Moonsault = 20
 
 
-
 # genWrestler_name = input("Pick a Generic Move for Your Character: ")
 # genOpponent_name = input("Pick a Generic Move for Your Opponent: ")
 
@@ -156,7 +155,7 @@ weapons = {'Thumbtacks', 'Steel Folding Chair', 'Table', 'Ladder', 'Trash Can', 
 print("\n\n")
 print(weapons)
 
-weapons_names = ["Thumbtacks", "Steel Folding Chair","Table", "Ladder", "Trash Can", "Barbed Wire Bat", "Handcuffs", "Kendo Sticks", "Sledgehammer"]
+weapons_names = ["Thumbtacks", "Steel Folding Chair","Table", "Ladder", "Trash Can", "Barbed Wire Baseball Bat", "Handcuffs", "Kendo Sticks", "Sledgehammer"]
 user_response = ''
 weapon_name = ''    
 
@@ -225,7 +224,7 @@ print(stipulations_names)
 payperviews = {'Lethal Ladders', 'Lethal World', 'Lethal Empire', 'Lethal Tournament', 'Heavyweight Tournement', 'Lightweight Tournement', 'Lethal Cage', 'Nothing Left to Lose'}
 print("\n\n")
 print(payperviews)
-ppv_name = input("Pick a Payperview: ")
+# ppv_name = input("Pick a Payperview: ")
 
 payperviews_names = ["Lethal Ladders", "Lethal World","Lethal Empire", "Lethal Tournament", "Heavyweight Tournement", "Lightweight Tournement", "Lethal Cage", "Nothing Left to Lose"]
 user_response = ''
@@ -249,16 +248,14 @@ print("the payperview name is: " + user_response + " -- " + payperview_name)
 print(payperviews_names)
 
 
-championships = {'Lightweight Championship', 'Intercontinental Championship', 'Heavyweight Championship', 'Lethal Championship',
-                 'Universal Championship', 'Ultimate Championship', 'United States Championship'}
+championships = ['Lightweight Championship', 'Intercontinental Championship', 'Heavyweight Championship', 'Lethal Championship', 'Universal Championship', 'Ultimate Championship']
 print("\n\n")
-#print(championships)
+print(championships)
 # champ_name = input("Pick a Championship: ")
 
-championships_names = ["Universal Champioship", "Lightweight Championship","Intercontinental Championship", "Heaveyweight Championship",
-                       "Lethal Championship", "Ultimate Championship"]
+championships_names = ['Lightweight Championship', 'Intercontinental Championship', 'Heavyweight Championship', 'Lethal Championship', 'Universal Championship', 'Ultimate Championship']
 user_response = ''
-championships_name = ''    
+#championships_names = ''    
 
 def validate5(un, un_list):
     global championships_name
@@ -272,17 +269,23 @@ def validate5(un, un_list):
     return True
 
 while validate(user_response, championships_names):
-    user_response = input("What championship would you like to fight for? ")
+    user_response = input("What championship would you like to fight for? xxx")
 
-print("the championships name is: " + user_response + " -- " + championship_name)
+#print("the championships name is: " + user_response + " -- " + championships_names)
+print("the championships name is: " + user_response + " -- ")
+
 print(championships_names)
 
 
 
+"""
+# old code from earlier project
+# replaced by instantiate object
+# line 81
 
 count = 0
 for x in wrestlers:
-    if x.lower() == champion_name.lower():
+    if x.lower() == champion.name.lower():  #champion_name.lower()
         if x != champion_name:
             champion_name = champion_name.title()
         champion = Wrestler(champion_name, mass[champion_name], sig_moves[champion_name], fin_moves[champion_name])
@@ -300,7 +303,7 @@ for x in wrestlers:
         # print(count)
     del wrestlers[count]
 
-
+"""
 
 #opponent = Wrestler(opponent_name, mass[opponent_name])
 
