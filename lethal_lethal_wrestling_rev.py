@@ -1,11 +1,19 @@
+# uncomment the following line to use Option B
+#dictionary_health = {'Sanaa': 122, 'Bidziil': 125, 'Ishita': 130 , 'Hao': 135 , 'Adela': 140 , 'The Bionic Man': 145 }
+        
 class Wrestler:
     """This is the beginning of a class for the wrestler"""
 
     def __init__(self, name, mass, sig_moves, fin_moves):
+        self.health = 120  # add a comment to this line to use option B
+        # remove the comment from the following line to use option B
+        #self.health = dictionary_health[name]
         self.name = name
         self.mass = mass
         self.sig_moves = sig_moves
         self.fin_moves = fin_moves
+        print("Your player name is: " + self.name + " and your health is at: " + str(self.health))
+
 
 class Moves:
     """This is the beginning of a class for moves"""
@@ -104,10 +112,7 @@ flying_chokeslam = 15
 two_handed_gut_buster = 15
 shooting_star_spinning_kick = 25
 
-
-
 dictionary_gen_moves = {'Dropkick': 10, 'DDT': 5, 'Sharpshooter': 25, 'Moonsault': 20}
-
 
 dropkick = 10
 DDT = 5
@@ -123,28 +128,14 @@ genMove_names = ["Dropkick", "DDT","Sharpshooter", "Moonsault"]
 user_response = ''
 genMove_name = ''    
 
-def validate1(un, un_list):
-    global genMove_name
-    count = 0
-    for list_item in un_list:
-        if list_item.lower().strip() == un.lower().strip():
-            del un_list[count]
-            genMove_name = list_item
-            return False
-        count += 1
-    return True
-
-while validate1(user_response, gen_moves):
+while validate(user_response, gen_moves):
     user_response = input("What generic move would your champion like to use? ")
 
-
-while validate1(user_response, gen_moves):
+while validate(user_response, gen_moves):
     user_response = input("What generic move would your challenger like to use? ")
 
 print("the generic move name is: " + user_response + " -- " + genMove_name)
 print(genMove_names)
-
-
 
 weapons = {'Thumbtacks', 'Steel Folding Chair', 'Table', 'Ladder', 'Trash Can', 'Barbed Wire Baseball Bat', 'Handcuffs', 'Kendo Sticks', 'Sledgehammer'}
 print("\n\n")
@@ -153,17 +144,6 @@ print(weapons)
 weapons_names = ["Thumbtacks", "Steel Folding Chair","Table", "Ladder", "Trash Can", "Barbed Wire Baseball Bat", "Handcuffs", "Kendo Sticks", "Sledgehammer"]
 user_response = ''
 weapon_name = ''    
-
-def validate2(un, un_list):
-    global weapon_name
-    count = 0
-    for list_item in un_list:
-        if list_item.lower().strip() == un.lower().strip():
-            del un_list[count]
-            weapon_name = list_item
-            return False
-        count += 1
-    return True
 
 while validate(user_response, weapons_names):
     user_response = input("What weapon would your champion like to use? ")
@@ -193,17 +173,6 @@ stipulations_names = ["I Quit Match", "Ladder Match","Pinfall Match", "Submissio
 user_response = ''
 stipulation_name = ''    
 
-def validate3(un, un_list):
-    global stipulation_name
-    count = 0
-    for list_item in un_list:
-        if list_item.lower().strip() == un.lower().strip():
-            del un_list[count]
-            stipulation_name = list_item
-            return False
-        count += 1
-    return True
-
 while validate(user_response, stipulations_names):
     user_response = input("What stipulation would you like to have? ")
 
@@ -220,17 +189,6 @@ payperviews_names = ["Lethal Ladders", "Lethal World","Lethal Empire", "Lethal T
 user_response = ''
 payperview_name = ''    
 
-def validate4(un, un_list):
-    global payperview_name
-    count = 0
-    for list_item in un_list:
-        if list_item.lower().strip() == un.lower().strip():
-            del un_list[count]
-            payperview_name = list_item
-            return False
-            count += 1
-    return True
-
 while validate(user_response, payperviews_names):
     user_response = input("What payperview would you like to fight at? ")
 
@@ -244,17 +202,6 @@ print(championships)
 
 championships_names = ['Lightweight Championship', 'Intercontinental Championship', 'Heavyweight Championship', 'Lethal Championship', 'Universal Championship', 'Ultimate Championship']
 user_response = ''
-
-def validate5(un, un_list):
-    global championships_name
-    count = 0
-    for list_item in un_list:
-        if list_item.lower().strip() == un.lower().strip():
-            del un_list[count]
-            championships_name = list_item
-            return False
-        count += 1
-    return True
 
 while validate(user_response, championships_names):
     user_response = input("What championship would you like to fight for?")
@@ -272,5 +219,11 @@ while run:
     if ans == 'quit':
         run = False
 
+if champion.health == challenger.health:
+    print("you have faught to a draw, congratulations")
+elif(champion.health > challenger.health):
+    print("Congratulations {}, you have vanquished {}!".format(champion.name, challenger.name))
+else:
+    print("Valiant effort {}, but {} has prevailed!".format(champion.name, challenger.name))
 
 print("Goodbye!")
